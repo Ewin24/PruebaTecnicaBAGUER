@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<script src="./assets/js/responsive.js" async></script>
+	<script type="module" src="./assets/js/Modules/app.js" defer></script>
+	<title>Sorteos APP</title>
+</head>
+
+<body>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand"><i class='bx bxs-tree icon'></i>Prueba tecnica</a>
+		<ul class="side-menu">
+			<li><a href="#" class="active"><i class='bx bxs-dashboard icon'></i>
+					Empleados</a></li>
+			<li><a class="active" href="./Pages/usuarios.html"><i class='bx bxs-user icon'></i>Usuarios</a></li>
+			<li><a class="active" href="./Pages/productLine.html"><i class='bx bxs-badge icon'></i>Inscripciones</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu toggle-sidebar'></i>
+			<form action="#">
+
+			</form>
+
+			<span class="divider"></span>
+			<div class="profile">
+				<img src="./assets/img/user-circle-solid-24.png" alt>
+				<ul class="profile-link">
+					<li><a href="./Pages/sign-in.html"><i class='bx bxs-log-out-circle'></i>Cerrar Sesión</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="relative max-w-2xl m-auto mt-12 border border-white rounded-lg p-4">
+				<div class="text-center">
+				  <h1 class="text-2xl">Random User Generator</h1>
+				  <button id="generate" class="relative bg-black text-white px-4 py-2 rounded w-full my-4">
+					<div class="spinner hidden"></div>
+					Generate User
+				  </button>
+				</div>
+			
+				<div id="user" class="mt-6">
+				  <div class="flex justify-between">
+					<div class="flex">
+					  <img class="w-48 h-48 rounded-full mr-8" src="https://randomuser.me/api/portraits/women/45.jpg" />
+					  <div class="space-y-3">
+						<p class="text-xl">
+						  <span class="font-bold">Name: </span>Sara Wilson
+						</p>
+						<p class="text-xl">
+						  <span class="font-bold">Email: </span> sarawilson@gmail.com
+						</p>
+						<p class="text-xl">
+						  <span class="font-bold">Phone: </span> (555) 555-5555
+						</p>
+						<p class="text-xl">
+						  <span class="font-bold">Location: </span> Boston, MA
+						</p>
+						<p class="text-xl"><span class="font-bold">Age: </span> 30</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+		</main>
+		<!-- MAIN -->
+	</section>
+</body>
+
+</html>
