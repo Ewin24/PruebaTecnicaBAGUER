@@ -2,84 +2,78 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="./assets/css/style.css">
-	<script src="./assets/js/responsive.js" async></script>
-	<script type="module" src="./assets/js/Modules/app.js" defer></script>
-	<title>Sorteos APP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <!-- Nucleo Icons -->
+    <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link id="pagestyle" href="./assets/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
 </head>
 
-<body>
-	<!-- SIDEBAR -->
-	<section id="sidebar">
-		<a href="#" class="brand"><i class='bx bxs-tree icon'></i>Prueba tecnica</a>
-		<ul class="side-menu">
-			<li><a href="#" class="active"><i class='bx bxs-dashboard icon'></i>
-					Empleados</a></li>
-			<li><a class="active" href="./Pages/usuarios.html"><i class='bx bxs-user icon'></i>Usuarios</a></li>
-			<li><a class="active" href="./Pages/productLine.html"><i class='bx bxs-badge icon'></i>Inscripciones</a>
-			</li>
-		</ul>
-	</section>
-	<!-- SIDEBAR -->
-
-	<section id="content">
-		<!-- NAVBAR -->
-		<nav>
-			<i class='bx bx-menu toggle-sidebar'></i>
-			<form action="#">
-
-			</form>
-
-			<span class="divider"></span>
-			<div class="profile">
-				<img src="./assets/img/user-circle-solid-24.png" alt>
-				<ul class="profile-link">
-					<li><a href="./Pages/sign-in.html"><i class='bx bxs-log-out-circle'></i>Cerrar Sesión</a></li>
-				</ul>
-			</div>
-		</nav>
-		<!-- NAVBAR -->
-
-		<!-- MAIN -->
-		<main>
-			<div class="relative max-w-2xl m-auto mt-12 border border-white rounded-lg p-4">
-				<div class="text-center">
-				  <h1 class="text-2xl">Random User Generator</h1>
-				  <button id="generate" class="relative bg-black text-white px-4 py-2 rounded w-full my-4">
-					<div class="spinner hidden"></div>
-					Generate User
-				  </button>
-				</div>
-			
-				<div id="user" class="mt-6">
-				  <div class="flex justify-between">
-					<div class="flex">
-					  <img class="w-48 h-48 rounded-full mr-8" src="https://randomuser.me/api/portraits/women/45.jpg" />
-					  <div class="space-y-3">
-						<p class="text-xl">
-						  <span class="font-bold">Name: </span>Sara Wilson
-						</p>
-						<p class="text-xl">
-						  <span class="font-bold">Email: </span> sarawilson@gmail.com
-						</p>
-						<p class="text-xl">
-						  <span class="font-bold">Phone: </span> (555) 555-5555
-						</p>
-						<p class="text-xl">
-						  <span class="font-bold">Location: </span> Boston, MA
-						</p>
-						<p class="text-xl"><span class="font-bold">Age: </span> 30</p>
-					  </div>
-					</div>
-				  </div>
-				</div>
-			  </div>
-		</main>
-		<!-- MAIN -->
-	</section>
+<body class="bg-gray-200">
+    <main class="main-content  mt-0">
+        <div class="page-header align-items-start min-vh-100"
+            style="background-image: url('../assets/img/robin-wersich-Q0IrpWQIMR4-unsplash.jpg');">
+            <span class="mask bg-gradient-dark opacity-6"></span>
+            <div class="container my-auto">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-12 mx-auto">
+                        <div class="card z-index-0 fadeIn3 fadeInBottom">
+                            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                                <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                                    <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">INICIAR SESION</h4>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <form role="form" class="text-start">
+                                    <p>Nombre de usuario</p>
+                                    <div class="input-group input-group-outline my-3">
+                                        <label class="form-label"></label>
+                                        <input type="name" id="name" class="form-control">
+                                    </div>
+                                    Contraseña
+                                    <div class="input-group input-group-outline mb-3">
+                                        <label class="form-label"></label>
+                                        <input type="password" id="password" class="form-control">
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="../index.html">
+                                            <button type="button" id="login-button"
+                                                class="btn bg-gradient-primary w-100 my-4 mb-2">Iniciar sesion</button>
+                                        </a>
+                                    </div>
+                                    <p class="mt-4 text-sm text-center">
+                                        No tienes cuenta?
+                                        <a href="./pages/sign-up.html"
+                                            class="text-primary text-gradient font-weight-bold">Registrarse</a>
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer position-absolute bottom-2 py-2 w-100">
+                <div class="container">
+                    <div class="row align-items-center justify-content-lg-between">
+                        <div class="col-12 col-md-6 my-auto">
+                            <div class="copyright text-center text-sm text-white text-lg-start">
+                                ©
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script>,
+                                made by edwin
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+    <script src="./assets/js/Modules/login.js"></script>
 </body>
 
 </html>

@@ -52,8 +52,8 @@ namespace API.Controllers
 
         public async Task<ActionResult<Usuario>> RegistroUsuario(RegistroUsuarioDTO registroUsuarioDTO)
         {
-            var existingUserWithEmail = await _context.Usuarios.FirstOrDefaultAsync(u => u.NombreUsuario == registroUsuarioDTO.NombreUsuario);
-            if (existingUserWithEmail != null)
+            var existingUserWithUserName = await _context.Usuarios.FirstOrDefaultAsync(u => u.NombreUsuario == registroUsuarioDTO.NombreUsuario);
+            if (existingUserWithUserName != null)
             {
                 ModelState.AddModelError("Nombre de Usuario", "El nombre de usuario ya está registrado");
                 return BadRequest(ModelState);
@@ -75,6 +75,32 @@ namespace API.Controllers
 
             registroUsuarioDTO.Nombres = result.Nombres;
             return CreatedAtAction(nameof(RegistroUsuario), new { id = registroUsuarioDTO.Nombres }, registroUsuarioDTO);
+        }
+
+        [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> EditUsuario(int id, [FromBody] UsuarioUpdateDTO usuarioDto)
+        {
+            var usuario = await _unitOfWork.Usuarios.GetByIdAsync(id);
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            usuario.Nombres = usuarioDto.Nombres;
+            usuario.NombreUsuario = usuarioDto.NombreUsuario;
+            try
+            {
+                _unitOfWork.Usuarios.Update(usuario);
+                await _unitOfWork.SaveAsync();
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Error al actualizar el usuario: " + ex.Message);
+            }
         }
 
         [HttpDelete("{id}")]

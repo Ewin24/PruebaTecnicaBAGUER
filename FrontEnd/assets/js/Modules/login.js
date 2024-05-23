@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 .then(data => {
                     console.log(data)
                     if (data.message === 'Inicio de sesión exitoso') {
-                        window.location.href = "/FrontEnd/index.html";
+                        window.location.href = "/FrontEnd/Pages/usuarios.html";
                         localStorage.setItem('nombreUsuario', nombreUsuario);
                     } else {
                         console.log("La respuesta del backend no es verdadera");

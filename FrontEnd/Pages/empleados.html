@@ -5,23 +5,27 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="../assets/libs/bootstrap-5.3.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/css/style.css">
-
-	<script src="../assets/libs/bootstrap-5.3.3/js/bootstrap.bundle.min.js" defer></script>
 	<script src="../assets/js/responsive.js" defer></script>
+
+	<link rel="shortcut icon" href="../assets/img/arrows.png" type="image/x-icon">
+	<link rel="stylesheet" href="../assets/css/spinner.css" />
+	<link rel="stylesheet" href="./../assets/libs/bootstrap-5.3.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./../assets/libs/DataTables/datatables.min.css">
+	<script src="../assets/libs/DataTables/datatables.js" defer></script>
+	<script src="../assets/libs/bootstrap-5.3.3/js/bootstrap.bundle.min.js" defer></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	<title>Sorteos APP</title>
+	<title>Prueba Tecnica APP</title>
 </head>
 
 <body>
 	<!-- SIDEBAR -->
 	<section id="sidebar">
-		<a href="#" class="brand"><i class='bx bxs-tree icon'></i>Prueba tecnica</a>
+		<a href="#" class="brand"><i class='bx bxs-tree icon'></i>Prueba Tecnica</a>
 		<ul class="side-menu">
-			<li><a href="#" class="active"><i class='bx bxs-dashboard icon'></i>
+			<li><a href="./usuarios.html" class="active"><i class='bx bxs-dashboard icon'></i>
 					Usuarios</a></li>
-			<li><a class="active" href="./empleados.html"><i class='bx bxs-user icon'></i>Empelados</a></li>
+			<li><a class="active" href="#"><i class='bx bxs-user icon'></i>Empleados</a></li>
 			</li>
 		</ul>
 	</section>
@@ -32,7 +36,6 @@
 		<nav>
 			<i class='bx bx-menu toggle-sidebar'></i>
 			<form action="#">
-
 			</form>
 
 			<span class="divider"></span>
@@ -47,35 +50,34 @@
 
 		<!-- MAIN -->
 		<main>
-			<div class="container mt-5">
-				<h2>Usuarios</h2>
-				<button id="btn-agregar" onclick=agregar(this) class="btn btn-success mb-3">Agregar Usuario</button>
+			<h1>Empleados en España</h1>
+			<div class="m-6">
 				<table id="example" class="table table" style="width:100%">
 					<thead>
 						<tr>
-							<th>Id</th>
+							<th></th>
 							<th>Nombres</th>
-							<th>Nombre de Usuario</th>
-							<th>Acciones</th>
+							<th>Apellidos</th>
+							<th>Detalle</th>
 						</tr>
 					</thead>
 					<tbody id="tbody">
-						<tr>
-							<td>1</td>
-							<td>Sara</td>
-							<td>Lopez</td>
-							<td>
-								<button id="btn-eliminar" class="btn btn-danger">Eliminar</button>
-								<button id="btn-editar" class="btn btn-primary">Editar</button>
-							</td>
-						</tr>
 					</tbody>
+					<tfoot>
+						<tr>
+							<th></th>
+							<th>Nombres</th>
+							<th>Apellidos</th>
+							<th>Detalle</th>
+						</tr>
+					</tfoot>
 				</table>
 			</div>
 		</main>
 		<!-- MAIN -->
 	</section>
-	<script src="../assets/js/Modules/usuarios.js"></script>
+	<script src="../assets/js/Modules/script.js"></script>
+	<script src="https://cdn.tailwindcss.com"></script>
 </body>
 
 </html>
