@@ -1,6 +1,14 @@
 # Prueba Técnica BAGUER - SAS.
 
-## Sentencias SQL iniciales
+# Instrucciones de ejecucion
+
+## Informacion previa
+Tener en cuenta que para la ejecucion del proyecto es necesario tener:
+
+- Herramientas de desarrollo .NET, (v8.0, v7.0)
+- Servidor de base de datos MySql 8.0
+
+## Poblar con datos de prueba
 
 INSERT INTO pruebatecnicabaguer.roles (Id, Nombre, Descripcion) VALUES(20, 'Usuario', 'Persona que hace uso del sistema');
 INSERT INTO pruebatecnicabaguer.roles (Id, Nombre, Descripcion) VALUES(10, 'Administrador', 'Rango de control maximo en el sistema');
