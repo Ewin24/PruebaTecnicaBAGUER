@@ -28,3 +28,7 @@ INSERT INTO pruebatecnicabaguer.roles (Id, Nombre, Descripcion) VALUES(10, 'Admi
 ## 4 Ejecucion FrontEnd
 
 - Entrar al archivo index, encontrado en: FrontEnd/index.html, luego desplegar usando la extension LiveServer o cualquier otro servidor local.
+
+## 5 swagger (opcional)
+- En caso de querer probar cada funcionalidad del backend, mas a detalle, se puede acceder a la siguiente ruta
+http://localhost:5124/swagger/index.html
