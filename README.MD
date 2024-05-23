@@ -2,18 +2,18 @@
 
 # Instrucciones de ejecucion
 
-## Informacion previa
+## 1 Informacion previa
 Tener en cuenta que para la ejecucion del proyecto es necesario tener:
 
 - Herramientas de desarrollo .NET, (v8.0, v7.0)
 - Servidor de base de datos MySql 8.0
 
-## Poblar con datos de prueba
+## 2 Poblar con datos de prueba
 
 INSERT INTO pruebatecnicabaguer.roles (Id, Nombre, Descripcion) VALUES(20, 'Usuario', 'Persona que hace uso del sistema');
 INSERT INTO pruebatecnicabaguer.roles (Id, Nombre, Descripcion) VALUES(10, 'Administrador', 'Rango de control maximo en el sistema');
 
-## Ejecucion BackEnd
+## 3 Ejecucion BackEnd
 
 - Se puede crear una base de datos previa, o el sistema la crea. los ajustes se encuentran en:  API\appsettings.json
 
@@ -25,6 +25,6 @@ INSERT INTO pruebatecnicabaguer.roles (Id, Nombre, Descripcion) VALUES(10, 'Admi
 
 - Ejecucion del backend: dotnet run --project API/
 
-## Ejecucion FrontEnd
+## 4 Ejecucion FrontEnd
 
 - Entrar al archivo index, encontrado en: FrontEnd/index.html, luego desplegar usando la extension LiveServer o cualquier otro servidor local.

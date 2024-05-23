@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 .then(response => {
                     console.log(response);
                     if (response.status === 201) {
-                        window.location.href = "/FrontEnd/Pages/sign-in.html";
+                        window.location.href = "/FrontEnd/index.html";
                         localStorage.setItem('nombreUsuario', nombreUsuario);
                     } else if (response.status === 400) {
                         window.alert("El usuario ya está registrado")
